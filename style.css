@@ -1,0 +1,118 @@
+:root {
+	/* Colors */
+	--red: #66001F;
+	--background: #66001F;
+	--foreground: #FEFCEF;
+	--border-radius: 70px;
+	--box-shadow: 8px 8px 13px #410014, -8px -8px 13px #410014;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	display: grid;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	font-weight: 400;
+	
+	height: 100vh;
+	line-height: 1.5;
+	margin: 0;
+	place-items: center;
+}
+
+p {
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+
+button {
+	border-radius: 0;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	overflow: visible;
+	text-transform: none;
+	text-color: #FEFCEF;
+}
+
+button:focus {
+	outline: none;
+}
+
+.timer__current {
+	font-size: 1.25rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-color: #FEFCEF;
+}
+
+.timer__time {
+	font-size: 3.052rem;
+	text-align: center;
+	text-color: #FEFCEF;
+}
+
+.timer__card {
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	margin-bottom: 1.75rem;
+	width: 16rem;
+	padding: 2.75rem 1.15rem;
+}
+
+.timer__pad {
+	display: grid;
+	grid-template-areas: "start reset" "plus minus" "change change";
+	gap: 1rem;
+}
+
+.pad__start {
+	grid-area: start;
+	color: #66001F;
+}
+
+.pad__plus-five {
+	grid-area: plus;
+	color: #66001F;
+}
+
+.pad__minus-five {
+	grid-area: minus;
+	color: #66001F;
+}
+
+.pad__reset {
+	grid-area: reset;
+	color: #66001F;
+}
+
+.pad__change {
+	grid-area: change;
+	color: #66001F;
+	
+}
+
+.btn {
+	border: none;
+	padding: 1.75rem;
+	border-radius: 25px;
+	box-shadow: var(--box-shadow);
+	background: #FEFCEF;
+
+}
+
+.btn-red {
+	color: var(--red);
+	--background: #66001F;
+}
